@@ -5,7 +5,7 @@ def main():
   ]
 
   printHeader()
-  selection = getUserSelection()
+  selection = int(getUserSelection())
   if selection == 0:
     printStudentsByAge(students)
   elif selection == 1:
@@ -13,7 +13,7 @@ def main():
   elif selection == 2:
     pass
   else:
-    print "SELECTION NOT RECOGNIZED"
+    print ("SELECTION NOT RECOGNIZED")
 
 
 class Student:
@@ -34,7 +34,7 @@ class Student:
   def assignRandomHeight(self, isMetric):
     pass
 
-inputQuestions = [ 
+inputQuestions = [
   "For STUDENTS BY AGE, type 0",
   "For STUDENTS BY LAST NAME, type 1",
   "For STUDENTS BY FIRST NAME, type 3",
@@ -55,7 +55,7 @@ def printStudentsByAge(students):
   print ("----Students By Age-----")
   sortStudents = sorted(students, key=lambda student: student.age)
   for student in students:
-    print student.lastName + ", " + student.firstName + ", " + str(student.age)
+      print (student.lastName + ", " + student.firstName + ", " + str(student.age))
 
 def printStudentsByLName(students):
   print ("----Students By -----")
